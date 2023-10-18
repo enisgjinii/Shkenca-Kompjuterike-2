@@ -1,6 +1,10 @@
 # Shkenca Kompjuterike 2
 
-![Profesori](https://www.ubt-uni.net/wp-content/uploads/2017/05/IMG_0035-min-scaled.jpg) <!-- Zëvendëso me foton e profesorit -->
+<img
+  src="/assets/image.png"
+  alt="Alt text"
+  title="Optional title"
+  style="border: 1px solid black; border-radius: 50%;width:50%"><br>
 
 Mirë se vini në repozitorin "Shkenca Kompjuterike 2" për kursin udhëhequr nga Profesori Lavdim Menxhiqi.
 
