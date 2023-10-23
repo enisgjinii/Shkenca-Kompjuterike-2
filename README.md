@@ -14,14 +14,14 @@ Mirë se vini në repozitorin "Shkenca Kompjuterike 2" për kursin udhëhequr ng
 
 | Java | Tema                                                                    | Përshkrimi                                                                                            |
 | ---- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| 1    | Hyrje në programimin e bazuar në objekte                                | Jave 1 është përqëndruar në themelet e programimit të bazuar në objekte.                              |
+| 1    | Hyrje në programimin e bazuar në objekte                                | Jave 1 është e përqëndruar në themelet e programimit të bazuar në objekte.                              |
 | 2    | Klasat dhe objektet                                                     | Ky javë merret me konceptet e klasave dhe objekteve në Java.                                          |
 | 3    | Trashëgimia dhe polimorfizmi                                            | Për të kuptuar trashëgiminë dhe polimorfizmin në programimin e bazuar në objekte.                     |
 | 4    | Klasat abstrakte                                                        | Hyrje në klasat abstrakte dhe përdorimi i tyre.                                                       |
 | 5    | Klasat e ndërthurura (klasat e brendshme, klasat e ndërthurura statike) | Eksploatimi i thellë i klasave të brendshme, përfshirë klasat e brendshme statike.                    |
 | 6    | Klasat e ndërthurura (Klasat lokale dhe klasat anonime)                 | Eksplorimi i klasave lokale dhe klasave anonime në Java.                                              |
 | 7    | Interface-ët                                                            | Kuptimi dhe implementimi i interface-ve në Java.                                                      |
-| 8    | Përjashtimet                                                            | Java Week 8 është e dedikuar përjashtimeve dhe trajtimit të gabimeve.                                 |
+| 8    | Përjashtimet                                                            | Java 8 është e dedikuar përjashtimeve dhe trajtimit të gabimeve.                                 |
 | 9    | Leximi dhe shkrimi file-ve tektual                                      | Mësimi i leximit dhe shkrimi nga dhe në skedarët e tekstit.                                           |
 | 10   | Hyrje në programimin konkurrues                                         | Hyrje në programimin konkurrues dhe konceptet e tij.                                                  |
 | 11   | Përkrahja e Java për programimin konkurrues                             | Përdorimi i tipareve të Java për programimin konkurrues.                                              |
