@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="sq">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vizualizimi i Renditjes së Varfëruar me Shell për Fjalën</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+      #chars-container {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+      }
+      .char {
+        width: 20px;
+        margin: 0 2px;
+        background-color: #3498db;
+        text-align: center;
+        padding: 8px;
+        font-size: 14px;
+        color: white;
+        border-radius: 4px;
+      }
+      table {
+        margin: auto;
+        border-collapse: collapse;
+        width: 50%;
+      }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: center;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Vizualizimi i Renditjes së Varfëruar me Shell për Fjalën</h1>
+    <div id="chars-container"></div>
+    <table id="steps-table">
+      <thead>
+        <tr>
+          <th>Hapi</th>
+          <th>Gjendja e Fjalës</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <script>
+      function shellSortStringVisualize(word) {
+        const steps = [word.split("")];
+        const letters = word.split("");
+
+        let gap = Math.floor(letters.length / 2);
+
+        while (gap > 0) {
+          for (let i = gap; i < letters.length; i++) {
+            let temp = letters[i];
+            let j = i;
+
+            while (j >= gap && letters[j - gap].localeCompare(temp, "sq") > 0) {
+              letters[j] = letters[j - gap];
+              j -= gap;
+            }
+
+            letters[j] = temp;
+            steps.push([...letters]);
+          }
+
+          gap = Math.floor(gap / 2);
+        }
+
+        return steps.map((step) => step.join(""));
+      }
+
+      const word = "ENTHUSIASTIC";
+      const charsContainer = document.getElementById("chars-container");
+      const stepsTableBody = document.querySelector("#steps-table tbody");
+
+      // Visualizo hapësirat e sortimit
+      const sortingSteps = shellSortStringVisualize(word);
+      sortingSteps.forEach((step, index) => {
+        setTimeout(() => {
+          updateChars(step);
+          updateTable(index + 1, step);
+        }, index * 1000); // Vonimi për çdo hap për një vizualizim më të mirë
+      });
+
+      function updateChars(str) {
+        charsContainer.innerHTML = "";
+        str.split("").forEach((char) => {
+          const charDiv = document.createElement("div");
+          charDiv.className = "char";
+          charDiv.textContent = char;
+          charsContainer.appendChild(charDiv);
+        });
+      }
+
+      function updateTable(step, str) {
+        const row = document.createElement("tr");
+        const stepCell = document.createElement("td");
+        const stateCell = document.createElement("td");
+
+        stepCell.textContent = step;
+        stateCell.textContent = str;
+
+        row.appendChild(stepCell);
+        row.appendChild(stateCell);
+
+        stepsTableBody.appendChild(row);
+      }
+    </script>
+  </body>
+</html>
